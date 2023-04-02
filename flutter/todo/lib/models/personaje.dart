@@ -1,3 +1,5 @@
+
+//CREACION CLASE PERSONAJE CON PROPIEDADES
 class Personaje {
   final String name;
   final String thumbnail;
@@ -8,6 +10,7 @@ class Personaje {
   final int storiesCount;
   final int eventsCount;
   final List<String> firstThreeSeriesNames;
+
   Personaje({
     required this.name,
     required this.thumbnail,
@@ -21,6 +24,8 @@ class Personaje {
 
   });
 
+
+  //METODO QUE MAPEA Y DEVUELVE UN JSON A PERSONAJE
   factory Personaje.fromJson(Map<String, dynamic> json) {
     final seriesNames = (json['series']['items'] as List<dynamic>)
     .map<String>((series) => series['name'] as String)
@@ -39,7 +44,7 @@ class Personaje {
       storiesCount: json['stories']['available'] as int,
       eventsCount: json['events']['available'] as int,
       firstThreeSeriesNames: seriesNames,
-
+      //se inicializan todas las propiedades de la intancia
     );
   }
 }

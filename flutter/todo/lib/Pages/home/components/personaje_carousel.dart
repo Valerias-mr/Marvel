@@ -3,6 +3,8 @@ import 'dart:math' as math;
 import 'package:todo/models/personaje.dart';
 import 'personaje_card.dart';
 
+
+//CARRUSEL
 class CharacterCarousel extends StatefulWidget {
   final List<Personaje> personajes;
 

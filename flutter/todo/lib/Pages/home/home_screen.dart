@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo/constants.dart';
 import 'package:todo/pages/home/components/body.dart';
 
+//ORGANIZACION PRIMERA PANTALLA
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           child: SizedBox(
             height: 50,
             child: Image.network(
-              'https://raw.githubusercontent.com/Marlon-Orrego/Dllo-Movil/main/todov2/assets/images/marvel_logo.png',
+              'https://i.pinimg.com/originals/b5/de/08/b5de08b9050e254b008dcc13d28ac42e.jpg',
               fit: BoxFit.cover,
             ),
           ),

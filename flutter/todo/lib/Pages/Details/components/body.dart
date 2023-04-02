@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:todo/constants.dart';
 import 'package:todo/models/personaje.dart';
+import 'informacion.dart';
 
-import 'backdrop_rating.dart';
 
+//MUESTRA DESCRIPCION Y TRES PRIMERAS SERIES
 class BodyPersonaje extends StatelessWidget {
   final Personaje personaje;
 
@@ -39,8 +40,9 @@ class BodyPersonaje extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: Text(
+              //Validacion descripcion
               personaje.description.isEmpty
-                  ? "Este personaje no tiene descripción"
+                  ? "This character does not have a description"
                   : personaje.description,
               style: TextStyle(
                 color: Color.fromARGB(255, 255, 255, 255),
@@ -54,7 +56,7 @@ class BodyPersonaje extends StatelessWidget {
               horizontal: kDefaultPadding,
             ),
             child: Text(
-              "Primeras 3 Series",
+              "First three series",
               style: TextStyle(
                 color: Color.fromARGB(255, 255, 255, 255),
                 fontSize: Theme.of(context).textTheme.headline5!.fontSize,
@@ -65,6 +67,7 @@ class BodyPersonaje extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: personaje.firstThreeSeriesNames.isEmpty
+                //Validacion series
                 ? Text(
                     "No tiene series",
                     style: TextStyle(

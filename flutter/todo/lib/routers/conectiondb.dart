@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:todo/models/personaje.dart';
 
+//CONEXION API
 Future<List<Personaje>> getMarvelCharacters() async {
   final publicKey = '980751961399d17add954c03025a134a';
   final privateKey = '76f21272c5d84e5a3eb5acd6a0f7f460a5d9af6f';

@@ -3,6 +3,7 @@ import 'package:todo/Pages/Details/Details_screen.dart';
 import 'package:todo/models/personaje.dart';
 import '../../../constants.dart';
 
+//CARD INICIALES
 class PersonajeCard extends StatelessWidget {
   final Personaje personaje;
   const PersonajeCard({Key? key, required this.personaje}) : super(key: key);

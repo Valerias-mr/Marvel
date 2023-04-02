@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo/Pages/Details/components/body.dart';
 import 'package:todo/models/personaje.dart'; // importamos la clase personaje
 
+//SEGUNDA PANTALLA 
 class DetailsScreenP extends StatelessWidget {
 final Personaje personaje;
 

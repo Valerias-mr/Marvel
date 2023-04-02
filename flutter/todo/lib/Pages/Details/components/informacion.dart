@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:todo/models/personaje.dart';
 import '../../../constants.dart';
 
+
+//BOTON PARA REGRESAR 
 class MyBackButton extends BackButton {
   final VoidCallback? onPressed;
 
@@ -26,7 +28,7 @@ class MyBackButton extends BackButton {
   }
 }
 
-
+//MUESTRA LAS SERIES, COMICS, HISTORIAS Y EVENTOS
 class BackdropAndRating extends StatelessWidget {
   const BackdropAndRating({
     Key?key,
@@ -37,12 +39,10 @@ class BackdropAndRating extends StatelessWidget {
   final Personaje personaje;
  final Size size;
 
- 
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      // 40% of our total height
+      // 40% de la altura total
       height: size.height * 0.4,
       child: Stack(
         children: <Widget>[
@@ -118,7 +118,7 @@ class BackdropAndRating extends StatelessWidget {
                             style: TextStyle(color: Colors.black),
                             children: [
                               TextSpan(
-                                text: "Historias\n",
+                                text: "Stories\n",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.w600),
                               ),
@@ -164,7 +164,7 @@ class BackdropAndRating extends StatelessWidget {
                             style: TextStyle(color: Colors.black),
                             children: [
                               TextSpan(
-                                text: "Eventos\n",
+                                text: "Events\n",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.w600),
                               ),
