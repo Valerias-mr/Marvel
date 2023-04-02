@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:todo/Pages/Details/components/body.dart';
 import 'package:todo/models/personaje.dart'; // importamos la clase personaje
-import 'package:todo/pages/Details/components/body.dart';
 
-class DetailsScreen extends StatelessWidget {
- // actualizamos el tipo de objeto a personaje
+class DetailsScreenP extends StatelessWidget {
+final Personaje personaje;
+
+const DetailsScreenP({Key? key, required this.personaje}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
- // actualizamos el parámetro que se pasa al constructor de Body
+      body: BodyPersonaje(personaje: personaje)
+
     );
   }
 }

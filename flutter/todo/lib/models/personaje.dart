@@ -29,8 +29,7 @@ class Personaje {
       thumbnail: json['thumbnail']['path'] +
           '.' +
           json['thumbnail']['extension'] as String,
-      image: '${json['thumbnail']['path']}.${json['thumbnail']['extension']}'
-          as String,
+      image: '${json['thumbnail']['path']}.${json['thumbnail']['extension']}'as String,
       description: json['description'] as String,
       comicsCount: json['comics']['available'] as int,
       seriesCount: json['series']['available'] as int,

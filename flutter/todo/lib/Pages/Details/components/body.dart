@@ -3,8 +3,10 @@ import 'package:todo/constants.dart';
 import 'package:todo/models/personaje.dart';
 
 
-class Body extends StatelessWidget {
+class BodyPersonaje extends StatelessWidget {
+final Personaje personaje;
 
+const BodyPersonaje({Key? key, required this.personaje}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class Body extends StatelessWidget {
               horizontal: kDefaultPadding,
             ),
             child: Text(
-              "Descripción",
+              personaje.name,
               style: Theme.of(context).textTheme.headline5,
             ),
           ),
