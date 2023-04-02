@@ -9,7 +9,7 @@ Future<List<Personaje>> getMarvelCharacters() async {
   final hash = "d9ff0a24225b012a3e5a809e4ee1070f";
 
   final url =
-      'https://gateway.marvel.com:443/v1/public/characters?ts=$timeStamp&apikey=$publicKey&hash=$hash&limit=15&offset=1000';
+      'https://gateway.marvel.com:443/v1/public/characters?ts=$timeStamp&apikey=$publicKey&hash=$hash&limit=15&offset=500';
   final response = await http.get(Uri.parse(url));
 
   if (response.statusCode == 200) {

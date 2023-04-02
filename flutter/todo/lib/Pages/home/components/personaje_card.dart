@@ -48,11 +48,7 @@ class PersonajeCard extends StatelessWidget {
                   children: [
                     Text(personaje.name,
                         style: Theme.of(context).textTheme.headline6),
-                    SizedBox(height: kDefaultPadding / 2),
-                    Text(
-                      personaje.description,
-                      style: Theme.of(context).textTheme.caption,
-                    ),
+                    
                   ],
                 ),
               ),

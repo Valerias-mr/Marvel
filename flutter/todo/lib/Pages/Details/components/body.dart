@@ -23,12 +23,17 @@ class BodyPersonaje extends StatelessWidget {
           SizedBox(height: kDefaultPadding),
           Padding(
             padding: EdgeInsets.symmetric(
-              vertical: kDefaultPadding,
+              vertical: kDefaultPadding ,
               horizontal: kDefaultPadding,
             ),
             child: Text(
               personaje.name,
-              style: Theme.of(context).textTheme.headline5,
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontSize: Theme.of(context).textTheme.headline5!.fontSize,
+                fontWeight: Theme.of(context).textTheme.headline5!.fontWeight,
+              ),             
+              
             ),
           ),
           Padding(
@@ -38,10 +43,11 @@ class BodyPersonaje extends StatelessWidget {
                   ? "Este personaje no tiene descripción"
                   : personaje.description,
               style: TextStyle(
-                color: Color(0xFF737599),
+                color: Color.fromARGB(255, 255, 255, 255),
               ),
             ),
           ),
+          SizedBox(height: kDefaultPadding * 2.0),
           Padding(
             padding: EdgeInsets.symmetric(
               vertical: kDefaultPadding,
@@ -49,7 +55,11 @@ class BodyPersonaje extends StatelessWidget {
             ),
             child: Text(
               "Primeras 3 Series",
-              style: Theme.of(context).textTheme.headline5,
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontSize: Theme.of(context).textTheme.headline5!.fontSize,
+                fontWeight: Theme.of(context).textTheme.headline5!.fontWeight,
+              ),             
             ),
           ),
           Padding(
@@ -58,13 +68,13 @@ class BodyPersonaje extends StatelessWidget {
                 ? Text(
                     "No tiene series",
                     style: TextStyle(
-                      color: Color(0xFF737599),
+                      color: Color.fromARGB(255, 255, 255, 255),
                     ),
                   )
                 : Text(
                     "${personaje.firstThreeSeriesNames.take(3).join('\n')}",
                     style: TextStyle(
-                      color: Color(0xFF737599),
+                      color: Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
           ),

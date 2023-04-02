@@ -10,7 +10,7 @@ const DetailsScreenP({Key? key, required this.personaje}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Color.fromARGB(255, 4, 4, 4),
       body: BodyPersonaje(personaje: personaje)
 
     );

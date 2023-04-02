@@ -1,7 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:todo/models/personaje.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constants.dart';
+
+class MyBackButton extends BackButton {
+  final VoidCallback? onPressed;
+
+  const MyBackButton({Key? key, this.onPressed}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      iconSize: 28,
+      icon: Container(
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.white,
+        ),
+        child: Icon(
+          Icons.arrow_back,
+          color: Color.fromARGB(255, 0, 0, 0),
+        ),
+      ),
+      onPressed: onPressed ?? () => Navigator.maybePop(context),
+    );
+  }
+}
+
 
 class BackdropAndRating extends StatelessWidget {
   const BackdropAndRating({
@@ -12,6 +36,9 @@ class BackdropAndRating extends StatelessWidget {
 
   final Personaje personaje;
  final Size size;
+
+ 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -60,6 +87,7 @@ class BackdropAndRating extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+    
                         Icon(Icons.auto_stories),
                         SizedBox(height: kDefaultPadding / 4),
                         RichText(
@@ -157,7 +185,9 @@ class BackdropAndRating extends StatelessWidget {
             ),
           ),
           // Back Button
-          const SafeArea(child: BackButton(color: Colors.red,)),
+          const SafeArea(
+            child: MyBackButton(),
+            ),
         ],
       ),
     );
