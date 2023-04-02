@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo/constants.dart';
 import 'package:todo/models/personaje.dart';
 
+import 'backdrop_rating.dart';
 
 class BodyPersonaje extends StatelessWidget {
 final Personaje personaje;
@@ -16,6 +17,7 @@ const BodyPersonaje({Key? key, required this.personaje}) : super(key: key);
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+         BackdropAndRating(size: size, personaje: personaje),
           SizedBox(height: kDefaultPadding / 2),
           Padding(
             padding: EdgeInsets.symmetric(
