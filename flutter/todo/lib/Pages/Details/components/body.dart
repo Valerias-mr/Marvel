@@ -69,7 +69,7 @@ class BodyPersonaje extends StatelessWidget {
             child: personaje.firstThreeSeriesNames.isEmpty
                 //Validacion series
                 ? Text(
-                    "No tiene series",
+                    "This character does not have series",
                     style: TextStyle(
                       color: Color.fromARGB(255, 255, 255, 255),
                     ),
