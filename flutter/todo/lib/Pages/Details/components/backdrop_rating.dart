@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo/models/personaje.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constants.dart';
 
 class BackdropAndRating extends StatelessWidget {
@@ -60,19 +60,19 @@ class BackdropAndRating extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        Icon(Icons.auto_stories),
                         SizedBox(height: kDefaultPadding / 4),
                         RichText(
                           text: TextSpan(
                             style: TextStyle(color: Colors.black),
                             children: [
                               TextSpan(
-                                text: "${personaje.comicsCount}/",
+                                text: "Comics\n",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.w600),
                               ),
-                              TextSpan(text: "10\n"),
                               TextSpan(
-                                text: "150,212",
+                                text: "${personaje.comicsCount}",
                                 style: TextStyle(color: kTextLightColor),
                               ),
                             ],
@@ -80,53 +80,84 @@ class BackdropAndRating extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // Rate this
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        Icon(Icons.menu_book_rounded),
                         SizedBox(height: kDefaultPadding / 4),
-                        Text("Rate This",
-                            style: Theme.of(context).textTheme.bodyText2),
+                        RichText(
+                          text: TextSpan(
+                            style: TextStyle(color: Colors.black),
+                            children: [
+                              TextSpan(
+                                text: "Historias\n",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.w600),
+                              ),
+                              TextSpan(
+                                text: "${personaje.storiesCount}",
+                                style: TextStyle(color: kTextLightColor),
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
-                    // Metascore
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Container(
-                          padding: EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                            color: Color(0xFF51CF66),
-                            borderRadius: BorderRadius.circular(2),
-                          ),
-                          child: Text(
-                            "${personaje.storiesCount}",
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
+                        Icon(Icons.tv_rounded),
                         SizedBox(height: kDefaultPadding / 4),
-                        Text(
-                          "Metascore",
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w500),
+                        RichText(
+                          text: TextSpan(
+                            style: TextStyle(color: Colors.black),
+                            children: [
+                              TextSpan(
+                                text: "Series\n",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.w600),
+                              ),
+                              TextSpan(
+                                text: "${personaje.seriesCount}",
+                                style: TextStyle(color: kTextLightColor),
+                              ),
+                            ],
+                          ),
                         ),
-                        Text(
-                          "62 critic reviews",
-                          style: TextStyle(color: kTextLightColor),
-                        )
                       ],
-                    )
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.event_repeat_rounded),
+                        SizedBox(height: kDefaultPadding / 4),
+                        RichText(
+                          text: TextSpan(
+                            style: TextStyle(color: Colors.black),
+                            children: [
+                              TextSpan(
+                                text: "Eventos\n",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.w600),
+                              ),
+                              TextSpan(
+                                text: "${personaje.eventsCount}",
+                                style: TextStyle(color: kTextLightColor),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    
+
                   ],
                 ),
               ),
             ),
           ),
           // Back Button
-          SafeArea(child: BackButton()),
+          const SafeArea(child: BackButton(color: Colors.red,)),
         ],
       ),
     );

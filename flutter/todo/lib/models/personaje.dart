@@ -7,7 +7,7 @@ class Personaje {
   final int seriesCount;
   final int storiesCount;
   final int eventsCount;
-
+  final List<String> firstThreeSeriesNames;
   Personaje({
     required this.name,
     required this.thumbnail,
@@ -17,13 +17,16 @@ class Personaje {
     required this.seriesCount,
     required this.storiesCount,
     required this.eventsCount,
+    required this.firstThreeSeriesNames,
+
   });
 
   factory Personaje.fromJson(Map<String, dynamic> json) {
-    final seriesNames = json['series']['items']
-        .map((series) => series['name'] as String)
-        .take(3)
-        .toList();
+    final seriesNames = (json['series']['items'] as List<dynamic>)
+    .map<String>((series) => series['name'] as String)
+    .take(3)
+    .toList();
+
     return Personaje(
       name: json['name'] as String,
       thumbnail: json['thumbnail']['path'] +
@@ -35,6 +38,8 @@ class Personaje {
       seriesCount: json['series']['available'] as int,
       storiesCount: json['stories']['available'] as int,
       eventsCount: json['events']['available'] as int,
+      firstThreeSeriesNames: seriesNames,
+
     );
   }
 }
